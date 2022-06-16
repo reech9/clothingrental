@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -50,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(children: [
         // tagline of an application
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: RichText(
             text: TextSpan(
               style: const TextStyle(color: Colors.white, fontSize: 27),
@@ -64,20 +62,20 @@ class _HomeScreenState extends State<HomeScreen> {
 // searching field ---button
         Container(
           color: Colors.white60,
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(16),
           child: TextFormField(
-            decoration: new InputDecoration(
+            decoration: InputDecoration(
               hintText: 'Search',
-              icon: new Icon(Icons.search),
+              icon: const Icon(Icons.search),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
             ),
           ),
         ),
 
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const Text(
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
             'Shop by',
             style: TextStyle(
               fontSize: 20,
@@ -92,30 +90,30 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 50),
+                padding: const EdgeInsets.only(left: 50),
                 child: ButtonBar(
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: Colors.white38),
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Occassion',
                         style: TextStyle(
-                            color: Colors.amber, 
+                            color: Colors.amber,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.only(left: 25),
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.white38),
+                        style:
+                            ElevatedButton.styleFrom(primary: Colors.white38),
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Brand',
                           style: TextStyle(
-                              color: Colors.amber, 
+                              color: Colors.amber,
                               fontWeight: FontWeight.bold,
                               fontSize: 16),
                         ),
@@ -130,12 +128,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
 // displaying products as a recommendation
 
-        Card(
-          child: ,
-        ),
-
-
-       
+        // Card(
+        //   child: ,
+        // ),
       ]),
       backgroundColor: Colors.blueGrey,
     );
